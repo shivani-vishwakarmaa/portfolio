@@ -476,6 +476,70 @@ body::after {
   transform: translateY(-2px);
 }
 
+/* ── RESUME DOWNLOAD BUTTON (Hero) ── */
+.btn-resume {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  color: var(--accent);
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.9rem 2rem;
+  border-radius: 100px;
+  text-decoration: none;
+  border: 1px solid rgba(61, 255, 160, 0.4);
+  transition: all var(--transition);
+  letter-spacing: 0.02em;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-resume::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(61, 255, 160, 0.06);
+  opacity: 0;
+  transition: opacity var(--transition);
+  border-radius: inherit;
+}
+
+.btn-resume:hover {
+  border-color: var(--accent);
+  color: #000;
+  background: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(61, 255, 160, 0.28);
+}
+
+.btn-resume:hover::before {
+  opacity: 1;
+}
+
+.btn-resume:focus-visible {
+  outline: 3px solid rgba(61, 255, 160, 0.55);
+  outline-offset: 4px;
+}
+
+/* ── RESUME NAV LINK (Navbar) ── */
+.nav-links .nav-resume {
+  background: transparent;
+  color: var(--accent) !important;
+  border: 1px solid rgba(61, 255, 160, 0.35);
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition: all var(--transition);
+}
+
+.nav-links .nav-resume:hover {
+  background: var(--accent);
+  color: #000 !important;
+  border-color: var(--accent);
+  box-shadow: 0 0 18px rgba(61, 255, 160, 0.25);
+}
 .hero-stats {
   display: flex;
   align-items: center;
